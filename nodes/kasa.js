@@ -328,7 +328,7 @@ module.exports = function (RED) {
             topic: device.shortId,
             payload: {
               ...info,
-              timestamp: moment().format()
+              timestamp: moment().format("x")
             }
           })
         )
@@ -397,7 +397,7 @@ module.exports = function (RED) {
           topic: device.shortId,
           payload: {
             event: event,
-            timestamp: moment().format(),
+            timestamp: moment().format("x"),
             ...passedProps
           }
         })
